@@ -48,7 +48,7 @@ router.get('/login',function(req, res){
 	res.render('admin/login', { title: 'Admin' });
 });
 router.post('/login', function(req, res){
-	res.send('hello')
+	res.redirect('../admin');
 });
 
 
