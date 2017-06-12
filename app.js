@@ -4,11 +4,26 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var engine = require('ejs-mate');
+var multer = require('multer');
+
+var mongoose = require('mongoose');
+//global.db = mongoose.connect('mongodb://hello:hello1@ds133398.mlab.com:33398/rmsress');
+mongoose.Promise = global.Promise;
+global.db = mongoose.connect('mongodb://localhost/test1',function (err) {
+  if (err){
+    console.log(err)
+  }
+});
+
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var image = require('./routes/image');
+var admin = require('./routes/admin');
 
 var app = express();
+app.engine('ejs', engine);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,6 +39,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/image',image);
+app.use('/admin',admin);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
