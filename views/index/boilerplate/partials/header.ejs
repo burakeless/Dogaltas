@@ -13,11 +13,11 @@
 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="/">ANA SAYFA</a></li>
-                        <li class="active"><a href="/hakkimizda">HAKKIMIZDA</a></li>
-                        <li><a href="/yonetim">YÖNETİM</a></li>
-                        <li><a href="/uyeler">ÜYELER</a></li>
-                        <li><a href="/iletisim">İLETİŞİM</a></li>
+                        <li <% if(active === 0){ %> class="active" <% } %> ><a href="/">ANA SAYFA </a></li>
+                        <li <% if(active === 1){ %> class="active" <% } %> ><a href="/hakkimizda">HAKKIMIZDA</a></li>
+                        <li <% if(active === 2){ %> class="active" <% } %> ><a href="/yonetim">YÖNETİM</a></li>
+                        <li <% if(active === 3){ %> class="active" <% } %> ><a href="/uyeler">ÜYELER</a></li>
+                        <li <% if(active === 4){ %> class="active" <% } %> ><a href="/iletisim">İLETİŞİM</a></li>
                     </ul>
                 </div>
             </div><!--/.container-->

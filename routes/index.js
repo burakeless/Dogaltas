@@ -3,23 +3,45 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index/index', { title: 'Express' });
+  res.render('index/index', { 
+  	title: 'Express',
+  	active: 0 
+  });
 });
 
 router.get('/hakkimizda',function(req, res){
-	res.render('index/hakkimizda');
+	res.render('index/hakkimizda',{
+		title:'express',
+		active:1
+	});
 });
 
 router.get('/yonetim', function(req, res){
-	res.render('index/yonetim');
+	res.render('index/yonetim',{
+		title:'express',
+		active:2
+	});
 });
 
 router.get('/uyeler', function(req, res){
-	res.render('index/uyeler');
+	res.render('index/uyeler',{
+		title:'express',
+		active:3
+	});
 });
 
 router.get('/iletisim',function(req, res){
-	res.render('index/iletisim')
+	res.render('index/iletisim',{
+		title:'express',
+		active:4
+	});
+});
+
+router.get('/detail/:image', function(req, res){
+	res.render('index/detail',{
+			title:'express',
+			active:4
+	});
 });
 
 router.post('/sendemails', function(req, res){
