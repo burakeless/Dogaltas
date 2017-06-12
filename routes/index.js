@@ -44,6 +44,14 @@ router.get('/detail/:image', function(req, res){
 	});
 });
 
+router.get('/login',function(req, res){
+	res.render('admin/login', { title: 'Admin' });
+});
+router.post('/login', function(req, res){
+	res.send('hello')
+});
+
+
 router.post('/sendemails', function(req, res){
 	console.log(req);
 	res.send('hello');
@@ -55,5 +63,7 @@ router.get('/sendemails',function(req, res){
 		'message':'Thank you for contact us. As early as possible  we will contact you'
 	});
 })
+
+
 
 module.exports = router;
