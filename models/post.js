@@ -4,7 +4,8 @@ var mySchema = Schema({
     title: String,
     desc: String,
     createDate: Date,
-    updateDate: Date
+    updateDate: Date,
+    photos: [String]
 });
 
 /* global db */
