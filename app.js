@@ -10,10 +10,11 @@ var multer = require('multer');
 var mongoose = require('mongoose');
 //global.db = mongoose.connect('mongodb://hello:hello1@ds133398.mlab.com:33398/rmsress');
 mongoose.Promise = global.Promise;
-global.db = mongoose.connect('mongodb://localhost/test1',function (err) {
+global.db = mongoose.connect('mongodb://hello:hello@ds127842.mlab.com:27842/dogaltas',function (err) {
   if (err){
     console.log(err)
   }
+  console.log('login');
 });
 
 
