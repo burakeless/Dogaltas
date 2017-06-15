@@ -1,0 +1,55 @@
+<% layout('./admin/boilerplate/layout') -%>
+ <div id="wrapper">
+ 		<%- include /partials/header %>
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header"><%= title %></h1>
+                    </div>
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Faliyetler</th>
+                                            <th>X</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% for(var i=0; i<users.length; i++) {%>
+                                        <tr>
+                                            <td><%= i %></td>
+                                            <td> <%= users[i].title %> </td>
+                                            <td><%= users[i].desc %></td>
+                                        </tr>
+                                         <% } %>
+
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+
+
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->

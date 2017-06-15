@@ -3,84 +3,15 @@
         <div class="container">
             <div class="center wow fadeInDown">
                 <h2><%= title %></h2>
-                  </div>
-
+            </div>
             <div class="row">
-              <div class="col-xs-12 col-sm-4 col-md-3">
-                  <div class="recent-work-wrap">
-                        <a class="preview" href="images\kahvalti\01.jpg" rel="prettyPhoto"><img class="img-responsive" src="/images\little\01.png" alt=""></a>
-                  </div>
-              </div>
-
-              <div class="col-xs-12 col-sm-4 col-md-3">
-                  <div class="recent-work-wrap">
-                        <a class="preview" href="images\kahvalti\02.jpg" rel="prettyPhoto"><img class="img-responsive" src="/images\little\02.png" alt=""></a>
-                  </div>
-              </div>
-
-              <div class="col-xs-12 col-sm-4 col-md-3">
-                  <div class="recent-work-wrap">
-                      <a class="preview" href="images\kahvalti\03.jpg" rel="prettyPhoto"><img class="img-responsive" src="/images\little\03.png" alt=""></a>
-                  </div>
-              </div>
-
-              <div class="col-xs-12 col-sm-4 col-md-3">
-                  <div class="recent-work-wrap">
-                        <a class="preview" href="images\kahvalti\04.jpg" rel="prettyPhoto"><img class="img-responsive" src="/images\little\04.png" alt=""></a>
-                  </div>
-              </div>
-
-
+              <% for(var i=0; i<12; i++) {%>
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                          <a class="preview" href="images\kahvalti\05.jpg" rel="prettyPhoto"><img class="img-responsive" src="/images\little\05.png" alt=""></a>
+                          <img class="img-responsive test" src="/images\little\01.png" alt="">
                     </div>
                 </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                          <a class="preview" href="images\kahvalti\06.jpg" rel="prettyPhoto"><img class="img-responsive" src="/images\little\06.png" alt=""></a>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <a class="preview" href="images\kahvalti\07.jpg" rel="prettyPhoto"><img class="img-responsive" src="/images\little\07.png" alt=""></a>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                          <a class="preview" href="images\kahvalti\08.jpg" rel="prettyPhoto"><img class="img-responsive" src="/images\little\08.png" alt=""></a>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                          <a class="preview" href="images\kahvalti\09.jpg" rel="prettyPhoto"><img class="img-responsive" src="/images\little\09.png" alt=""></a>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                          <a class="preview" href="images\kahvalti\10.jpg" rel="prettyPhoto"><img class="img-responsive" src="/images\little\10.png" alt=""></a>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                        <a class="preview" href="images\kahvalti\11.jpg" rel="prettyPhoto"><img class="img-responsive" src="/images\little\11.png" alt=""></a>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="recent-work-wrap">
-                          <a class="preview" href="images\kahvalti\12.jpg" rel="prettyPhoto"><img class="img-responsive" src="/images\little\12.png" alt=""></a>
-                    </div>
-                </div>
-
-
-
+               <% } %>
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#recent-works-->
