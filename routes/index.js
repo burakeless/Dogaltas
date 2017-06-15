@@ -3,41 +3,43 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index/index', { 
-  	title: 'Express',
-  	active: 0 
+  res.render('index/index', {
+  	title: 'Ana Sayfa',
+  	active: 0
   });
 });
 
 router.get('/hakkimizda',function(req, res){
 	res.render('index/hakkimizda',{
-		title:'express',
+		title:'Hakkımızda',
 		active:1
 	});
 });
 
 router.get('/yonetim', function(req, res){
 	res.render('index/yonetim',{
-		title:'express',
+		title:'Yönetim',
+    subtitle1:'Yönetim Kurulu',
+    subtitle2:'Denetim Kurulu',
 		active:2
 	});
 });
 
 router.get('/uyeler', function(req, res){
 	res.render('index/uyeler',{
-		title:'express',
+		title:'Üyeler',
 		active:3
 	});
 });
 
 router.get('/iletisim',function(req, res){
 	res.render('index/iletisim',{
-		title:'express',
+		title:'İletişim',
 		active:4
 	});
 });
 
-router.get('/detail/:image', function(req, res){
+router.get('/detay/:image', function(req, res){
 	res.render('index/detail',{
 			title:'express',
 			active:4
